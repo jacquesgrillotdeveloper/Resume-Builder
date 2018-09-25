@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Active_position_should_not_have_end_date</fullName>
+    <active>true</active>
+    <description>if the Current Position checkbox is enabled, the end date should be blank.</description>
+    <errorConditionFormula>AND(
+	RecordType.DeveloperName = &quot;Professional&quot;,	
+	Current_Position__c = TRUE,
+	NOT(ISBLANK(End_Date__c))
+	)</errorConditionFormula>
+    <errorMessage>The experience cannot be a current position and have an end date.</errorMessage>
+</ValidationRule>

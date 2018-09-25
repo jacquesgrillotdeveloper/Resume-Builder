@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Personal_Website__c</fullName>
+    <description>URL for Contact&#39;s personal website</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Enter in the URL for a personal website</inlineHelpText>
+    <label>Personal Website</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Url</type>
+</CustomField>

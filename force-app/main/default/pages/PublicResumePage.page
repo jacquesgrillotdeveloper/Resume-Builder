@@ -1,0 +1,76 @@
+<apex:page standardController="Resume__c" extensions="ResumeControllerExtension" rendered="{!Resume__c.Active__c}" readOnly="true" title="{!Resume__c.Contact__r.Name}" >
+    <!--<apex:slds rendered="true"/>-->
+    <apex:pageBlock title="{!Resume__c.Contact__r.Name}" >
+        <apex:pageBlockSection columns="1">
+            <div>
+                <H1>{!Resume__c.Contact__r.Title} <br/></H1>
+                {!Resume__c.Contact__r.MailingCity}, {!Resume__c.Contact__r.MailingState}
+            </div>
+        </apex:pageBlockSection>
+        <apex:pageBlockSection columns="2" showHeader="true" >
+            <apex:outputText value="{!Resume__c.Contact__r.Trailhead_Profile__c}"/>
+            <apex:outputText value="{!Resume__c.Contact__r.LinkedIn_Profile__c}" escape="false" />
+            <apex:outputText value="{!Resume__c.Contact__r.Personal_Website__c}"  escape="false"/>
+            <apex:outputText value="{!Resume__c.Contact__r.Certification_Validation__c}"  escape="false"/>
+        </apex:pageBlockSection>    
+        <apex:pageBlockSection title="Professional Summary" collapsible="false" showHeader="true" />
+        <apex:outputText value="{!Resume__c.Summary__c}" escape="false" />
+    </apex:pageBlock>
+    <apex:pageBlock title="Certifications" >
+        <apex:pageBlockSection columns="1" >
+            <apex:dataList value="{!certifications}" var="certs" type="disc" >
+                <apex:outputText value="{!certs.Name}" />
+            </apex:dataList>
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+    
+    <apex:pageBlock title="Professional Experience">
+        <apex:pageBlockTable value="{!jobExperiences}" var="exp" >
+            <apex:column value="{!exp.Organization__r.Name}, {!exp.Location__c}" headerValue="Employer" />
+            <apex:column value="{!exp.Job_Title__c}"/>
+            <apex:column value="{!exp.Experience_Span__c}" />
+            <apex:column breakBefore="true" colspan="3">
+                <apex:outputText value="{!exp.Description__c}" escape="false" />
+            </apex:column>
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+    
+    <apex:pageBlock title="Educational Experience"  >
+        <apex:pageBlockTable value="{!eduExperiences}" var="ed" >
+            <apex:column value="{!ed.Organization__r.Name}, {!ed.Location__c}"  headerValue="School" />
+            <apex:column value="{!ed.Degree_Earned__c}"/>
+            <apex:column value="{!ed.Completion_Date_Text__c}" />
+            <apex:column breakBefore="true" colspan="3">
+                <apex:outputText value="{!ed.Description__c}" escape="false" />            
+            </apex:column>
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+    
+    <apex:pageBlock title="Professional Development">
+        <apex:pageBlockTable value="{!trainingCourses}" var="tc" >
+            <apex:column value="{!tc.Course_Name__c}" />
+            <apex:column value="{!tc.Organization__r.Name}, {!tc.Location__c}" headerValue="Location" />
+            <apex:column value="{!tc.Completion_Date__c}" />
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+    
+    <apex:pageBlock title="Accomplishments" >
+        <apex:pageBlockSection columns="1">
+            <apex:dataList value="{!accomplishments}" var="acc" >
+                <apex:outputText value="<b>{!acc.Name} </b> - {!acc.Subtitle__c} ({!acc.Completion_Date__c})" escape="false" />
+            </apex:dataList>
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+    
+    <apex:pageBlock title="Technical Skills" >
+        <apex:pageBlockSection columns="1" >
+            <apex:dataList value="{!technicalSkills}" var="techSkills" >
+                <apex:outputText value="<b>{!techSkills.Name} </b> - {!techSkills.Skills_List__c}" escape="false" />
+            </apex:dataList>
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+
+    <div class="footer">
+        <div>Built on the Force.com Platform by Jacques Grillot with Salesforce DX</div>
+    </div>
+</apex:page>

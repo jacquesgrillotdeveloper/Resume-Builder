@@ -1,0 +1,24 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "Contact",
+                "referenceId": "ContactRef1"
+            },
+            "LastName": "Grillot",
+            "FirstName": "Jacques",
+            "Salutation": "Mr.",
+            "MailingStreet": "12 Main Street",
+            "MailingCity": "Gaithersburg",
+            "MailingState": "MD",
+            "MailingPostalCode": "20878",
+            "MailingCountry": "USA",
+            "MobilePhone": "(301) 555-1212",
+            "Email": "jacques@grillot.me",
+            "Title": "Salesforce Certified Application Architect",
+            "LinkedIn_Profile__c": "https://www.linkedin.com/in/jacquesgrillot",
+            "Trailhead_Profile__c": "https://trailhead.com/me/jacquesgrillot",
+            "Personal_Website__c": "https://grillot.me"
+        }
+    ]
+}

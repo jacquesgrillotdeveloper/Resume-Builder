@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApexPage xmlns="urn:metadata.tooling.soap.sforce.com" fqn="ResumeHelpPage">
+    <apiVersion>43.0</apiVersion>
+    <label>ResumeHelpPage</label>
+    <availableInTouch>true</availableInTouch>
+</ApexPage>

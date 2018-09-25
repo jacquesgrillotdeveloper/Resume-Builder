@@ -1,0 +1,50 @@
+[
+    {
+        "sobject": "Account",
+        "saveRefs": true,
+        "resolveRefs": false,
+        "files": [
+            "resume-data-Accounts.json"
+        ]
+    },
+    {
+        "sobject": "Contact",
+        "saveRefs": true,
+        "resolveRefs": false,
+        "files": [
+            "resume-data-Contacts.json"
+        ]
+    },
+    {
+        "sobject": "Resume__c",
+        "saveRefs": true,
+        "resolveRefs": true,
+        "files": [
+            "resume-data-Resume__cs.json"
+        ]
+    },
+    {
+        "sobject": "Experience__c",
+        "saveRefs": false,
+        "resolveRefs": true,
+        "files": [
+            "resume-data-Experience__cs.json"
+        ]
+    },
+    {
+        "sobject": "Achievement__c",
+        "saveRefs": false,
+        "resolveRefs": true,
+        "files": [
+            "resume-data-Achievement__cs.json"
+        ]
+    },
+    {
+        "sobject": "Technical_Skill__c",
+        "saveRefs": false,
+        "resolveRefs": true,
+        "files": [
+            "resume-data-Technical_Skill__cs.json"
+        ]
+    }
+]

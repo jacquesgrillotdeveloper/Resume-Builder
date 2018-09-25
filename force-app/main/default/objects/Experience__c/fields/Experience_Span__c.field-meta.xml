@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Experience_Span__c</fullName>
+    <description>This formula calculates the date range for an experience and returns it in Month (text) Year format</description>
+    <externalId>false</externalId>
+    <formula>CASE(MONTH(Start_Date__c),
+	1, &quot;January&quot;,
+	2, &quot;February&quot;,
+	3, &quot;March&quot;, 
+	4, &quot;April&quot;, 
+	5, &quot;May&quot;, 
+	6, &quot;June&quot;,
+	7, &quot;July&quot;,
+	8, &quot;August&quot;,
+	9, &quot;September&quot;,
+	10, &quot;October&quot;,
+	11, &quot;November&quot;,
+	12, &quot;December&quot;,
+	&quot;&quot;)
+&amp;&quot; &quot;&amp;TEXT(YEAR(Start_Date__c))
+&amp; &quot; - &quot; &amp;
+IF(
+	ISBLANK(End_Date__c),
+	&quot;Present&quot;,CASE(MONTH(End_Date__c),
+	1, &quot;January&quot;,
+	2, &quot;February&quot;,
+	3, &quot;March&quot;, 
+	4, &quot;April&quot;, 
+	5, &quot;May&quot;, 
+	6, &quot;June&quot;,
+	7, &quot;July&quot;,
+	8, &quot;August&quot;,
+	9, &quot;September&quot;,
+	10, &quot;October&quot;,
+	11, &quot;November&quot;,
+	12, &quot;December&quot;,
+	&quot;&quot;) 
+	&amp;&quot; &quot; &amp; TEXT(YEAR(End_Date__c))
+)</formula>
+    <label>Tenure</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>
