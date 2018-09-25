@@ -23,6 +23,10 @@
             </componentInstanceProperties>
             <componentInstanceProperties>
                 <name>label</name>
+                <value>Resume Builder Help</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>label</name>
                 <type>decorator</type>
                 <value>Help</value>
             </componentInstanceProperties>
