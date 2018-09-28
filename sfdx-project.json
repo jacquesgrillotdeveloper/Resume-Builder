@@ -1,11 +1,18 @@
 {
-  "packageDirectories": [
-    {
-      "path": "force-app",
-      "default": true
+    "packageDirectories": [
+        {
+            "path": "force-app",
+            "default": true,
+            "package": "ResumeBuilder",
+            "versionName": "Beta 1.0",
+            "versionNumber": "1.1.0.NEXT"
+        }
+    ],
+    "namespace": "",
+    "sfdcLoginUrl": "https://login.salesforce.com",
+    "sourceApiVersion": "43.0",
+    "packageAliases": {
+        "ResumeBuilder": "0Ho5A000000CaStSAK",
+        "ResumeBuilder@1.1.0-1": "04t5A0000011F2jQAE"
     }
-  ],
-  "namespace": "",
-  "sfdcLoginUrl": "https://login.salesforce.com",
-  "sourceApiVersion": "43.0"
 }
