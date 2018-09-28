@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Current_Position__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Flags whether the experience is currently occurring.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Is this your current position?</inlineHelpText>
+    <label>Current Position</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

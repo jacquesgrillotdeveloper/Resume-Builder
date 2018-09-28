@@ -1,0 +1,116 @@
+<apex:page standardController="Resume__c" extensions="ResumeControllerExtension" renderAs="pdf" showHeader="false" sidebar="false" standardStylesheets="false" applyBodyTag="false" applyHtmlTag="false" >
+    <html>
+        <head>
+            <style>
+                @page :first { /* setting of the first page of a document */
+                    /* hide page header */
+                    @top-center{content: normal}
+                }
+                @page {
+                    size: letter;
+                    margin: 13mm;
+                    @top-center {
+                        content: "{!Resume__c.Contact__r.Name} - ph: {!Resume__c.Contact__r.MobilePhone} - email: {!Resume__c.Contact__r.Email}";
+                    }
+                    @bottom-center {
+                        content: "Page " counter(page) " of " counter(pages); 
+                    }
+                }
+                .page-break {
+                display:block;
+                page-break-after:always;
+                }
+                body {
+                /* font-family: Arial Unicode MS; */
+                font-family: Helvetica;
+                }
+                
+            </style>
+        </head>
+        <div class="content">
+            <H1>{!Resume__c.Contact__r.Name}</H1>
+            <div>
+                <H3>
+                    {!Resume__c.Contact__r.Title} <br/>
+                    {!Resume__c.Contact__r.MailingCity}, {!Resume__c.Contact__r.MailingState} <br/>
+                </H3>
+            </div>
+            <div>
+                <b>ph: {!Resume__c.Contact__r.MobilePhone} &emsp; email: {!Resume__c.Contact__r.Email}</b>
+            </div>
+            <div>
+                <H2>Professional Summary:</H2>
+            </div>
+            <div>
+                <!-- Escape is set to false so that rich text does not display HTML markup -->
+                <apex:outputText value="{!Resume__c.Summary__c}" escape="false"/>
+            </div>
+            <div>
+                <H2>Certifications:</H2>
+                <apex:dataList value="{!certifications}" var="certs" type="disc" >
+                    <apex:outputText value="{!certs.Name}" />
+                </apex:dataList>
+            </div>
+            <div>
+                <H2>Professional Experience:</H2>     
+                <apex:dataTable value="{!jobExperiences}" var="exp" columns="3" >
+                    <b>
+                        <apex:column value="{!exp.Organization__r.Name}, {!exp.Location__c}" width="34%" />
+                        <apex:column value="{!exp.Job_Title__c}" width="33%" />
+                        <apex:column value="{!exp.Experience_Span__c}" width="33%" />
+                    </b>
+                    <apex:column breakBefore="true" colspan="3">
+                        <apex:outputText value="{!exp.Description__c}" escape="false" />
+                    </apex:column>
+                </apex:dataTable>
+            </div>
+            <div>
+                <H2>Educational Experience:</H2>     
+                <apex:dataTable value="{!eduExperiences}" var="ed" columns="3" >
+                    <apex:column value="{!ed.Organization__r.Name}, {!ed.Location__c}" width="40%" />
+                    <apex:column value="{!ed.Degree_Earned__c}" width="40%"/>
+                    <apex:column value="{!ed.Completion_Date_Text__c}" width="20%" />
+                    <apex:column breakBefore="true" colspan="3">
+                        <apex:outputText value="{!ed.Description__c}" escape="false" />            
+                    </apex:column>
+                </apex:dataTable>
+            </div>
+            <!--<div>
+                <H2>Professional Development:</H2>
+                <apex:dataTable value="{!trainingCourses}" var="tc"  >
+                    <apex:column value="{!tc.Course_Name__c}" headerValue="Course" />
+                    <apex:column value="{!tc.Completion_Date__c}" headerValue="Completed" />
+                </apex:dataTable>
+            </div>-->
+            <div>
+                <H2>Professional Development:</H2>
+                <apex:dataList value="{!trainingCourses}" var="tc"  >
+                    <apex:outputText value="{!tc.Course_Name__c} ({!tc.Completion_Date__c})" />
+                </apex:dataList>
+            </div>
+            <div>
+                <H2>Accomplishments:</H2>
+                <apex:dataList value="{!accomplishments}" var="acc" >
+                    <apex:outputText value="<b>{!acc.Name} </b> - {!acc.Subtitle__c} ({!acc.Completion_Date__c})" escape="false" />
+                </apex:dataList>
+            </div>
+            <div>
+                <H2>Technical Skills:</H2>
+                <apex:dataList value="{!technicalSkills}" var="techSkills" >
+                    <apex:outputText value="<b>{!techSkills.Name} </b> - {!techSkills.Skills_List__c}" escape="false" />
+                </apex:dataList>
+            </div>  
+            <div>
+                <H2>Links:</H2>                    
+                <b>Trailhead Profile: </b> <br/>
+                <apex:outputLink value="{!Resume__c.Contact__r.Trailhead_Profile__c}" target="_blank">{!Resume__c.Contact__r.Trailhead_Profile__c}</apex:outputLink> <br/>
+                <b>LinkedIn Profile:</b> <br/>
+                <apex:outputLink value="{!Resume__c.Contact__r.LinkedIn_Profile__c }" target="_blank">{!Resume__c.Contact__r.LinkedIn_Profile__c }</apex:outputLink> <br/>
+                <b>Personal Website:</b> <br/>
+                <apex:outputLink value="{!Resume__c.Contact__r.Personal_Website__c }" target="_blank">{!Resume__c.Contact__r.Personal_Website__c }</apex:outputLink> <br/>
+                <b>Salesforce Certifications:</b> <br/>
+                <apex:outputLink value="{!Resume__c.Contact__r.Certification_Validation__c }" target="_blank">{!Resume__c.Contact__r.Certification_Validation__c }</apex:outputLink>
+            </div>
+        </div>
+    </html>
+</apex:page>

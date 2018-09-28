@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Certification_Validation__c</fullName>
+    <description>The Certification validation link</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The url should be http://certification.salesforce.com/verification-email?init=1&amp;email=&lt;youremailaddress&gt;</inlineHelpText>
+    <label>Certification Validation</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Url</type>
+</CustomField>

@@ -3,3 +3,8 @@
 #
 
 package.xml
+force-app/main/default/components
+force-app/main/default/profiles/ResumeBuilder.profile-meta.xml
+force-app/main/default/profiles/ResumeBuilderProfile.profile.meta.xml
+force-app/main/default/sites
+force-app/main/default/staticresources

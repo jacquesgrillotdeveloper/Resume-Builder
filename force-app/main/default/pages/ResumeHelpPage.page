@@ -1,0 +1,31 @@
+<apex:page lightningStyleSheets="true" >
+<h1>Resume Builder App Help Page</h1>
+<p>Welcome to the Resume Builder App powered by Force.com! </p>
+<H3>Create a Contact Record</H3>
+<p>In order to create a Resume, you need to create a Contact record. This should be for the person who the resume is for (most likely yourself). Use the Resume Contact record type and fill in the information. The resume displays the Contact Name, Title (position desired or anything you want to label yourself as), Mailing City and State, Mobile Phone number, and Social Links. </p>
+<H3>Create the Resume Record</H3>    
+<p>From the Contact record, you can click on the "Related" tab and create a new Resume. When you create the resume, the Contact record will be populated.
+Enter in a Name for the resume. You could name it after positions you are applying for so that it is tailored to the position you desire. 
+Enter in a Professional Summary. This should outline your experience and skills that are relevant to the position. 
+Ensure that the Resume is active. <br/>
+After you've created the Resume, click on the "Related" tab. Create related records to fill in your resume. </p>
+<H3>Create Experience Records</H3>
+<p>There are 3 types of Experiences that are populated in the resume: <br/>
+<ul style="list-style-type:circle">
+    <li><b>Professional</b> - For Organization, if you haven't created one, click on New Account. Enter at least the Name, City and State for the Billing Address. Enter in Job title. If the job location is different is different than the Organization address enter in the City and State (otherwise the info from the organization will be automatically populated). Enter in the Start Date and End Date, if its your current job, enable the checkbox and leave End date blank. Enter in your responsibilities in the description. It is rich text, so you can make a bulleted list. </li>
+    <li><b>Education</b> - For Organization, create a record for your School including the name, City and State. Enter in degree earned and the completed date. Enter in your minor and/or relevent courses in the description. </li>
+    <li><b>Professional Development</b> - Enter in any professional training you've received, include the Course name. Specify what company facilited the training for Organization, Location, and Completed date. The description is not displayed in the resume, so you can put in any notes you wish.</li>
+</ul>
+</p>
+<H3>Create Achievement Records</H3>
+<ul style="list-style-type:circle">
+    <li><b>Certification</b> - Enter your Certification Name and Completion Date. If you have multiple certifications that you want ordered in a certain order, you can specify the sort number.</li>
+    <li><b>Achievement</b> - Enter in any Achievements you want to highlight. You can also specify a subtitle (such as an event achieved at. Enter in a sort order if you want them arranged in a particular order.</li>
+</ul>
+<H3>Create Technical Skills</H3>
+<p>Create a Name with a list of skills (e.g. Programming: Java, Javascipt...). Enter in a sort order to sort them in the resume.</p>
+<H3>Other Things</H3>
+<p>Use Activities and Notes to keep track of who you've sent the resume to. You can even attach any artifacts you may want to share with potential employers.<br/>
+<b>Note: Just be aware of your org's storage limits</b>
+</p>
+</apex:page>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Subtitle__c</fullName>
+    <description>Venue and Location text</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Enter in the venue or org, and location</inlineHelpText>
+    <label>Subtitle</label>
+    <length>50</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,84 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "Technical_Skill__c",
+                "referenceId": "Technical_Skill__cRef1"
+            },
+            "Name": "Security Tools",
+            "Sort_Order__c": 5,
+            "Skills_List__c": "Checkmarx, Salesforce Shield (Platform Encryption, Event Monitoring, Event Logging, Apex PMD",
+            "Resume__c": "@Resume__cRef1"
+        },
+        {
+            "attributes": {
+                "type": "Technical_Skill__c",
+                "referenceId": "Technical_Skill__cRef2"
+            },
+            "Name": "Salesforce Declarative",
+            "Sort_Order__c": 1,
+            "Skills_List__c": "Process Builder, Visual Flow, Workflow, Approval Processes, Custom Objects and Fields, Custom Settings, Territory 2.0, Role Hierarchy, Profiles, Permission Sets, Delegated Administration, Security configuration.",
+            "Resume__c": "@Resume__cRef1"
+        },
+        {
+            "attributes": {
+                "type": "Technical_Skill__c",
+                "referenceId": "Technical_Skill__cRef3"
+            },
+            "Name": "Databases",
+            "Sort_Order__c": 8,
+            "Skills_List__c": "MS SQL Server 2005/08/14, Oracle 10g/11g, Salesforce SOQL/SOSL",
+            "Resume__c": "@Resume__cRef1"
+        },
+        {
+            "attributes": {
+                "type": "Technical_Skill__c",
+                "referenceId": "Technical_Skill__cRef4"
+            },
+            "Name": "Salesforce Programmatic",
+            "Sort_Order__c": 2,
+            "Skills_List__c": "Apex, Apex Sharing, Visualforce, Lightning Components.",
+            "Resume__c": "@Resume__cRef1"
+        },
+        {
+            "attributes": {
+                "type": "Technical_Skill__c",
+                "referenceId": "Technical_Skill__cRef5"
+            },
+            "Name": "Data Integration / Migration",
+            "Sort_Order__c": 3,
+            "Skills_List__c": "Apex DataLoader, AutoRABIT Dataloader Pro, Dataloader.io, Talend ETL, Salesforce Connect (ODATA).",
+            "Resume__c": "@Resume__cRef1"
+        },
+        {
+            "attributes": {
+                "type": "Technical_Skill__c",
+                "referenceId": "Technical_Skill__cRef6"
+            },
+            "Name": "Deployment",
+            "Sort_Order__c": 4,
+            "Skills_List__c": "AutoRABIT, Git (AWS CodeCommit, Bitbucket, Github), Workbench, Ant, SalesforceDX",
+            "Resume__c": "@Resume__cRef1"
+        },
+        {
+            "attributes": {
+                "type": "Technical_Skill__c",
+                "referenceId": "Technical_Skill__cRef7"
+            },
+            "Name": "Salesforce Modules / Managed Packages",
+            "Sort_Order__c": 6,
+            "Skills_List__c": "Einstein Analytics, Quip, AccessNow, MapAnything, CWB Tool, Communities, Marketing Cloud",
+            "Resume__c": "@Resume__cRef1"
+        },
+        {
+            "attributes": {
+                "type": "Technical_Skill__c",
+                "referenceId": "Technical_Skill__cRef8"
+            },
+            "Name": "Agile/Change Management",
+            "Sort_Order__c": 7,
+            "Skills_List__c": "CA Agile, ServiceNow, JIRA, Salesforce Agile Accelerator.",
+            "Resume__c": "@Resume__cRef1"
+        }
+    ]
+}
