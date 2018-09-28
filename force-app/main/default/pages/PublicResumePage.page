@@ -1,4 +1,4 @@
-<apex:page standardController="Resume__c" extensions="ResumeControllerExtension" rendered="{!Resume__c.Active__c}" readOnly="true" title="{!Resume__c.Contact__r.Name}" >
+<apex:page standardController="Resume__c" extensions="ResumeControllerExtension" rendered="{!Resume__c.Active__c}" readOnly="true" title="{!Resume__c.Contact__r.Name}" showHeader="false" sidebar="false" >
     <!--<apex:slds rendered="true"/>-->
     <apex:pageBlock title="{!Resume__c.Contact__r.Name}" >
         <apex:pageBlockSection columns="1">
@@ -8,10 +8,30 @@
             </div>
         </apex:pageBlockSection>
         <apex:pageBlockSection columns="2" showHeader="true" >
-            <apex:outputText value="{!Resume__c.Contact__r.Trailhead_Profile__c}"/>
-            <apex:outputText value="{!Resume__c.Contact__r.LinkedIn_Profile__c}" escape="false" />
-            <apex:outputText value="{!Resume__c.Contact__r.Personal_Website__c}"  escape="false"/>
-            <apex:outputText value="{!Resume__c.Contact__r.Certification_Validation__c}"  escape="false"/>
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="{!$ObjectType.Contact.Fields.Trailhead_Profile__c.Label}" />
+                <apex:outputLink value="{!Resume__c.Contact__r.Trailhead_Profile__c}" target="_blank">
+                    {!Resume__c.Contact__r.Trailhead_Profile__c}
+                </apex:outputLink>
+            </apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="{!$ObjectType.Contact.Fields.LinkedIn_Profile__c.Label}" />
+                <apex:outputLink value="{!Resume__c.Contact__r.LinkedIn_Profile__c}" target="_blank">
+                    {!Resume__c.Contact__r.LinkedIn_Profile__c}
+                </apex:outputLink>
+            </apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="{!$ObjectType.Contact.Fields.Personal_Website__c.Label}" />
+                <apex:outputLink value="{!Resume__c.Contact__r.Personal_Website__c}" target="_blank">
+                    {!Resume__c.Contact__r.Personal_Website__c}
+                </apex:outputLink>
+            </apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="{!$ObjectType.Contact.Fields.Certification_Validation__c.Label}" />
+                <apex:outputLink value="{!Resume__c.Contact__r.Certification_Validation__c}" target="_blank">
+                    {!Resume__c.Contact__r.Certification_Validation__c}
+                </apex:outputLink>
+            </apex:pageBlockSectionItem>
         </apex:pageBlockSection>    
         <apex:pageBlockSection title="Professional Summary" collapsible="false" showHeader="true" />
         <apex:outputText value="{!Resume__c.Summary__c}" escape="false" />
