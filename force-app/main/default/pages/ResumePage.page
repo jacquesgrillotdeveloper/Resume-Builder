@@ -1,25 +1,42 @@
-<apex:page standardController="Resume__c" extensions="ResumeControllerExtension" >
-    <!-- When the below SLDS commend is enabled the lists to no display properly -->
-    <!--<apex:slds rendered="true"/>-->
-    <apex:pageBlock title="{!Resume__c.Contact__r.Name}" >
-        <apex:pageBlockSection columns="1">
-            <div>
-                <H1>{!Resume__c.Contact__r.Title} <br/></H1>
+<apex:page standardController="Resume__c" extensions="ResumeControllerExtension" lightningStylesheets="true" >
+    <apex:pageBlock >
+        
+                <div>
+                <H1>{!Resume__c.Contact__r.Name}</H1>
+                <H2>{!Resume__c.Contact__r.Title}</H2>
                 {!Resume__c.Contact__r.MailingCity}, {!Resume__c.Contact__r.MailingState}
             </div>
-        </apex:pageBlockSection>
         
         <apex:pageBlockSection columns="2" showHeader="true" >
             <apex:outputText value="{!Resume__c.Contact__r.MobilePhone}"  />
             <apex:outputText value="{!Resume__c.Contact__r.Email}"/>            
-            <!--<apex:outputLink value="{!Resume__c.Contact__r.Trailhead_Profile__c}" target="blank" title="{!Resume__c.Contact__r.Trailhead_Profile__c}">-->
-            <apex:outputText value="{!Resume__c.Contact__r.Trailhead_Profile__c}"/>
-            <!--</apex:outputLink>-->
-            <apex:outputText value="{!Resume__c.Contact__r.LinkedIn_Profile__c}" escape="false" />
-            <apex:outputText value="{!Resume__c.Contact__r.Personal_Website__c}"  escape="false"/>
-            <apex:outputText value="{!Resume__c.Contact__r.Certification_Validation__c}"  escape="false"/>
-        </apex:pageBlockSection>    
-        <apex:pageBlockSection title="Professional Summary" collapsible="false" showHeader="true" />
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="{!$ObjectType.Contact.Fields.Trailhead_Profile__c.Label}" />
+                <apex:outputLink value="{!Resume__c.Contact__r.Trailhead_Profile__c}" target="_blank">
+                    {!Resume__c.Contact__r.Trailhead_Profile__c}
+                </apex:outputLink>
+            </apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="{!$ObjectType.Contact.Fields.LinkedIn_Profile__c.Label}" />
+                <apex:outputLink value="{!Resume__c.Contact__r.LinkedIn_Profile__c}" target="_blank">
+                    {!Resume__c.Contact__r.LinkedIn_Profile__c}
+                </apex:outputLink>
+            </apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="{!$ObjectType.Contact.Fields.Personal_Website__c.Label}" />
+                <apex:outputLink value="{!Resume__c.Contact__r.Personal_Website__c}" target="_blank">
+                    {!Resume__c.Contact__r.Personal_Website__c}
+                </apex:outputLink>
+            </apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="{!$ObjectType.Contact.Fields.Certification_Validation__c.Label}" />
+                <apex:outputLink value="{!Resume__c.Contact__r.Certification_Validation__c}" target="_blank">
+                    {!Resume__c.Contact__r.Certification_Validation__c}
+                </apex:outputLink>
+            </apex:pageBlockSectionItem>
+        </apex:pageBlockSection>   
+    </apex:pageBlock>
+    <apex:pageBlock title="Professional Summary" >
         <apex:outputText value="{!Resume__c.Summary__c}" escape="false" />
     </apex:pageBlock>
     
