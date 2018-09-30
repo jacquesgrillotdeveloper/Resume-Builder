@@ -1,12 +1,12 @@
-<apex:page standardController="Resume__c" extensions="ResumeControllerExtension" rendered="{!Resume__c.Active__c}" readOnly="true" title="{!Resume__c.Contact__r.Name}" showHeader="false" sidebar="false" >
-    <!--<apex:slds rendered="true"/>-->
-    <apex:pageBlock title="{!Resume__c.Contact__r.Name}" >
-        <apex:pageBlockSection columns="1">
+<apex:page standardController="Resume__c" extensions="ResumeControllerExtension" rendered="{!Resume__c.Active__c}" readOnly="true" title="{!Resume__c.Contact__r.Name}" showHeader="false" sidebar="false" lightningStylesheets="true" >
+    <apex:pageBlock >
+        <!--<apex:pageBlockSection columns="1">-->
             <div>
-                <H1>{!Resume__c.Contact__r.Title} <br/></H1>
+                <H1>{!Resume__c.Contact__r.Name}</H1>
+                <H2>{!Resume__c.Contact__r.Title}</H2>
                 {!Resume__c.Contact__r.MailingCity}, {!Resume__c.Contact__r.MailingState}
             </div>
-        </apex:pageBlockSection>
+        <!--</apex:pageBlockSection>-->
         <apex:pageBlockSection columns="2" showHeader="true" >
             <apex:pageBlockSectionItem >
                 <apex:outputLabel value="{!$ObjectType.Contact.Fields.Trailhead_Profile__c.Label}" />
@@ -32,8 +32,9 @@
                     {!Resume__c.Contact__r.Certification_Validation__c}
                 </apex:outputLink>
             </apex:pageBlockSectionItem>
-        </apex:pageBlockSection>    
-        <apex:pageBlockSection title="Professional Summary" collapsible="false" showHeader="true" />
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+    <apex:pageBlock title="Professional Summary">
         <apex:outputText value="{!Resume__c.Summary__c}" escape="false" />
     </apex:pageBlock>
     <apex:pageBlock title="Certifications" >
