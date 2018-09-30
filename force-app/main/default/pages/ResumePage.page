@@ -1,11 +1,11 @@
 <apex:page standardController="Resume__c" extensions="ResumeControllerExtension" lightningStylesheets="true" >
     <apex:pageBlock >
         
-                <div>
-                <H1>{!Resume__c.Contact__r.Name}</H1>
-                <H2>{!Resume__c.Contact__r.Title}</H2>
-                {!Resume__c.Contact__r.MailingCity}, {!Resume__c.Contact__r.MailingState}
-            </div>
+        <div>
+            <H1>{!Resume__c.Contact__r.Name}</H1>
+            <H2>{!Resume__c.Contact__r.Title}</H2>
+            {!Resume__c.Contact__r.MailingCity}, {!Resume__c.Contact__r.MailingState}
+        </div>
         
         <apex:pageBlockSection columns="2" showHeader="true" >
             <apex:outputText value="{!Resume__c.Contact__r.MobilePhone}"  />
@@ -93,8 +93,9 @@
             </apex:dataList>
         </apex:pageBlockSection>
     </apex:pageBlock>
-
     <div class="footer">
-        <div>Built on the Force.com Platform by Jacques Grillot with Salesforce DX</div>
+        <center>
+            <div>Resume built on the Force.com Platform by Jacques Grillot with Salesforce DX</div>
+        </center>
     </div>
 </apex:page>
