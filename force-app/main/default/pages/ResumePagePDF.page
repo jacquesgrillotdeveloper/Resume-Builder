@@ -56,19 +56,17 @@
             </apex:dataList>
         </c:panel>
         <c:well >
-            <c:jumbotron >
-                <H1>Links:</H1>
-                <p>
-                    <b>Trailhead Profile: </b> <br/>
-                    <apex:outputLink value="{!Resume__c.Contact__r.Trailhead_Profile__c}" target="_blank">{!Resume__c.Contact__r.Trailhead_Profile__c}</apex:outputLink> <br/>
-                    <b>LinkedIn Profile:</b> <br/>
-                    <apex:outputLink value="{!Resume__c.Contact__r.LinkedIn_Profile__c }" target="_blank">{!Resume__c.Contact__r.LinkedIn_Profile__c }</apex:outputLink> <br/>
-                    <b>Personal Website:</b> <br/>
-                    <apex:outputLink value="{!Resume__c.Contact__r.Personal_Website__c }" target="_blank">{!Resume__c.Contact__r.Personal_Website__c }</apex:outputLink> <br/>
-                    <b>Salesforce Certifications:</b> <br/>
-                    <apex:outputLink value="{!Resume__c.Contact__r.Certification_Validation__c }" target="_blank">{!Resume__c.Contact__r.Certification_Validation__c }</apex:outputLink>
-                </p>
-            </c:jumbotron>
+            <H1>Links:</H1>
+            <p>
+                <b>Trailhead Profile: </b> <br/>
+                <apex:outputLink value="{!Resume__c.Contact__r.Trailhead_Profile__c}" target="_blank">{!Resume__c.Contact__r.Trailhead_Profile__c}</apex:outputLink> <br/>
+                <b>LinkedIn Profile:</b> <br/>
+                <apex:outputLink value="{!Resume__c.Contact__r.LinkedIn_Profile__c }" target="_blank">{!Resume__c.Contact__r.LinkedIn_Profile__c }</apex:outputLink> <br/>
+                <b>Personal Website:</b> <br/>
+                <apex:outputLink value="{!Resume__c.Contact__r.Personal_Website__c }" target="_blank">{!Resume__c.Contact__r.Personal_Website__c }</apex:outputLink> <br/>
+                <b>Salesforce Certifications:</b> <br/>
+                <apex:outputLink value="{!Resume__c.Contact__r.Certification_Validation__c }" target="_blank">{!Resume__c.Contact__r.Certification_Validation__c }</apex:outputLink>
+            </p>
         </c:well>
     </c:visualstrapblock>
 </apex:page>
