@@ -4,8 +4,8 @@
             "path": "force-app",
             "default": true,
             "package": "ResumeBuilder",
-            "versionName": "Beta 1.2",
-            "versionNumber": "1.2.0.NEXT"
+            "versionName": "Summer '18",
+            "versionNumber": "1.5.0.NEXT"
         }
     ],
     "namespace": "",
@@ -14,6 +14,9 @@
     "packageAliases": {
         "ResumeBuilder": "0Ho5A000000CaStSAK",
         "ResumeBuilder@1.1.0-1": "04t5A0000011F2jQAE",
-        "ResumeBuilder@1.2.0-1": "04t5A0000011IqAQAU"
+        "ResumeBuilder@1.2.0-1": "04t5A0000011IqAQAU",
+        "ResumeBuilder@1.3.0-1": "04t5A000001pt8eQAA",
+        "ResumeBuilder@1.4.0-1": "04t5A000001pwXiQAI",
+        "ResumeBuilder@1.5.0-1": "04t5A000001pxTbQAI"
     }
 }

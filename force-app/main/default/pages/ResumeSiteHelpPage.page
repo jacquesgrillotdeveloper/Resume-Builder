@@ -1,0 +1,141 @@
+<apex:page lightningStylesheets="true" >
+    <h1>Resume Builder Site Setup Guide</h1>
+    To expose your resume page externally (those who do not have a salesforce login to your org), you will need to set up a Sites.com site. 
+    <H2>Pre-configuration:</H2>
+    <p>You will need to set up a couple of things prior to setting up the site. Per the initial documentation, this app is meant for a Dev org since you will need to modify sharing rules. </p>
+    <ol>
+        <li>Enable external sharing:</li>
+        <ol>
+            <li>In Setup, in the quick find, type in Sharing and click the Sharing Settings link.</li>
+            <li>Click on "Enable External Sharing" button if it's not already enabled.</li>
+            <li>Under Organization-Wide Defaults, click Edit.</li>
+            <li>Ensure that Account and Contract are set to at least Public Read-Only for Default External Access.</li>
+            <li>Ensure that Contact is set to at least Public Read-Only for Default External Access.</li>
+            <li>Click Save.</li>
+        </ol>
+        <li>Enable Site domain:</li>
+        <ol>
+            <li>In Setup, in the quick find, type in Sites, and click the Sites link.</li>
+            <li>Enter in a Domain Name and click Check Availablity.</li>
+            <li>Once you find and available name, enable "I have read..." and click Register My Salesforce Site Domain.</li>
+        </ol>
+    </ol>
+    <H2>Configure Site</H2>
+    <p>Configure the Site to make the pages externally availabe.</p>
+    <ol>
+        <li>In Setup, in the quick find, type in Sites, and click the Sites link.</li>
+        <li>In the sites related list, click New</li>
+        <li>Create the new Site</li>
+        <ol>
+            <li>Site Label: ResumeBuilder</li>
+            <li>Site Contact: your user account</li>
+            <li>Default Web Address: ResumeBuilder</li>
+            <li>Active: checked</li>
+            <li>Active Site Home Page: PublicResumePage</li>
+            <li>Leave all the defaults.</li>
+        </ol>
+        <li>Click Save</li>
+        <li>Under Site Visualforce Pages, click edit, only enable:</li>
+        <ol>
+            <li>BandwidthExceeded</li>
+            <li>Exception</li>
+            <li>FileNotFound</li>
+            <li>InMaintenance</li>
+            <li>PublicResumePage</li>
+            <li>ResumePage (this is option since is displays the Contact phone and email.</li>
+            <li>SiteTemplate</li>
+            <li>Unauthorized</li>
+        </ol>
+        <li>Click Save</li>
+        <li>Click on Public Access Settings</li>
+        <li>Click Edit</li>
+        <li>Set all the tabs to “Tab Hidden”</li>
+        <li>Set the following Permissions:</li>
+        <ol>
+            <li><b>Standard Objects:</b></li>
+            <li>Accounts: Read</li>
+            <li>Contacts: Read</li>
+            <li><b>Custom Objects:</b></li>
+            <li>Achievements: Read</li>
+            <li>Experiences: Read</li>
+            <li>Resumes: Read</li>
+            <li>Technical Skills: Read</li>
+        </ol>
+        <li>Click Save</li>
+        <li>Scroll down to Field-Level Security</li>
+        <ol>
+            <li>Click on “View” next to Account</li>
+            <li>Ensure that Read is available to at least Account Name and Billing Address</li>
+            <li>Click Save and Back to Profile</li>
+            <li>Click on “View” next to Contact</li>
+            <li>Ensure that Read is available to at least Account Name, Email, LinkedIn Profile, Mailing Address, Mobile, Personal Website, Title, Trailhead Profile.</li>
+            <li>Click Save and Back to Profile</li>        
+        </ol>
+        <li>Scroll down to Custom Field-Level Security</li>
+        <ol>
+            <li>Click on “View” next to Achievement</li>
+            <li>Ensure that Read is available to all the fields.</li>
+            <li>Click Save and Back to Profile</li>
+            <li>Click on “View” next to Experience</li>
+            <li>Ensure that Read is available to all the fields.</li>
+            <li>Click Save and Back to Profile</li>
+            <li>Click on “View” next to Resume</li>
+            <li>Ensure that Read is available to all the fields.</li>
+            <li>Click Save and Back to Profile</li>
+            <li>Click on “View” next to Technical Skill</li>
+            <li>Ensure that Read is available to all the fields.</li>
+            <li>Click Save and Back to Profile</li>        
+        </ol>
+        <li>Scroll down to Record Type Settings</li>
+        <ol>
+            <li>Click Edit next to Accounts</li>
+            <li>Enable the record types: Education Organization (Default), Professional Organization</li>
+            <li>Click Save (you don’t need to modify the default record type)</li>
+            <li>Click Edit next to Contacts</li>
+            <li>Enable the record types: Resume Contact</li>
+            <li>Click Save (you don’t need to modify the default record type)</li>
+            <li>Scroll down to Custom Record Type Settings</li>
+            <li>Click Edit next to Achievements</li>
+            <li>Enable the record types: Accomplishment (Default), Certification</li>
+            <li>Click Save (you don’t need to modify the default record type)</li>
+            <li>Click Edit next to Experiences</li>
+            <li>Enable the record types: Educational (Default), Professional, Professional Development</li>
+            <li>Click Save (you don’t need to modify the default record type)</li>        
+        </ol>
+        <li>Scroll down the the Enabled Apex Class Access Related List</li>
+        <li>Click Edit and add the following class:</li>
+        <ol>
+            <li>ResumeControllerExtension</li>
+        </ol>
+        <li>Click Save</li>
+        <li>Scroll down to ENabled Visualforce Page Access</li>
+        <li>Click Edit and verify the following pages are listed:</li>
+        <ol>
+            <li>ExceptionException</li>
+            <li>FileNotFound</li>
+            <li>InMaintenance</li>
+            <li>PublicResumePage</li>
+            <li>SiteTemplate</li>
+            <li>Unauthorized</li>
+            <li>Bandwidth Exceeded</li>
+        </ol> 
+    </ol>
+    <H2>Testing the Site:</H2> 
+    <ol>
+        <li>To test the site, go back to the site page and click on the Site URL.</li>
+        <li>The URL should open in a new tab and be the customdomain/ResumeBuilder.</li>
+        <li>Go back to your Salesforce browser tab, and open your resume record.</li>
+        <li>Copy the Record ID (hexidecimal string) from the address bar of your browser.</li>
+        <li>Go back to the custom domain tab in your browser.</li>
+        <li>At the end of the URL, type in <b>PublicResumePage?id=</b> and paste in the ID you copied.</li>
+        <li>Hit enter, and your page should load.</li>
+    </ol>
+    <H2>Common Issues:</H2>
+    <ol>
+        <li>My page loads but the contact info is not complete.</li>
+        <li><i>Ensure that the Sharing is correect and that External Sharing is enabled.</i></li>
+        <li><i>Also make sure that your contact record has a parent Account linked.</i></li>
+        <li>Certain Sections are not complete.</li>
+        <li><i>Verify that you have created records with the correct Record Type.</i></li>
+    </ol>
+</apex:page>
