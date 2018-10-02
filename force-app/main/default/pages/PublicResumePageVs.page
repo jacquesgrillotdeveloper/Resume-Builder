@@ -1,0 +1,97 @@
+<apex:page standardController="Resume__c" extensions="ResumeControllerExtension" showHeader="false" sidebar="false" >
+    <c:importvisualstrap theme="paper"/>
+    <c:visualstrapblock >
+        <c:well >
+            <c:pageheader title="{!Resume__c.Contact__r.Name}"/>
+            <H4>{!Resume__c.Contact__r.Title}</H4><br/>
+            <H5>{!Resume__c.Contact__r.MailingCity}, {!Resume__c.Contact__r.MailingState}</H5>
+            <apex:pageBlock >
+                <apex:pageBlockSection columns="2" showHeader="true" >
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel value="{!$ObjectType.Contact.Fields.Trailhead_Profile__c.Label}" />
+                        <apex:outputLink value="{!Resume__c.Contact__r.Trailhead_Profile__c}" target="_blank">
+                            {!Resume__c.Contact__r.Trailhead_Profile__c}
+                        </apex:outputLink>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel value="{!$ObjectType.Contact.Fields.LinkedIn_Profile__c.Label}" />
+                        <apex:outputLink value="{!Resume__c.Contact__r.LinkedIn_Profile__c}" target="_blank">
+                            {!Resume__c.Contact__r.LinkedIn_Profile__c}
+                        </apex:outputLink>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel value="{!$ObjectType.Contact.Fields.Personal_Website__c.Label}" />
+                        <apex:outputLink value="{!Resume__c.Contact__r.Personal_Website__c}" target="_blank">
+                            {!Resume__c.Contact__r.Personal_Website__c}
+                        </apex:outputLink>
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel value="{!$ObjectType.Contact.Fields.Certification_Validation__c.Label}" />
+                        <apex:outputLink value="{!Resume__c.Contact__r.Certification_Validation__c}" target="_blank">
+                            {!Resume__c.Contact__r.Certification_Validation__c}
+                        </apex:outputLink>
+                    </apex:pageBlockSectionItem>
+                </apex:pageBlockSection>  
+            </apex:pageBlock>
+        </c:well>
+        <c:panel title="Professional Summary" type="default">
+            <apex:outputText value="{!Resume__c.Summary__c}" escape="false" />
+        </c:panel>
+        <c:panel title="Certifications" type="primary" >
+            <c:well >
+                <apex:dataList value="{!certifications}" var="certs" type="disc" >
+                    <apex:outputText value="{!certs.Name}" />
+                </apex:dataList>
+            </c:well>
+        </c:panel>
+        <c:panel title="Professional Experience" type="default">
+            <apex:dataTable value="{!jobExperiences}" var="exp" styleClass="table table-hover" >
+                <apex:column value="{!exp.Organization__r.Name}, {!exp.Location__c}" />
+                <apex:column value="{!exp.Job_Title__c}"/>
+                <apex:column value="{!exp.Experience_Span__c}" />
+                <apex:column breakBefore="true" colspan="3">
+                    <apex:outputText value="{!exp.Description__c}" escape="false" />
+                </apex:column>
+            </apex:dataTable>
+        </c:panel>        
+        <c:panel title="Educational Experience" type="primary" >
+            <apex:dataTable value="{!eduExperiences}" var="ed" styleClass="table table-hover" >
+                <apex:column value="{!ed.Organization__r.Name}, {!ed.Location__c}" />
+                <apex:column value="{!ed.Degree_Earned__c}"/>
+                <apex:column value="{!ed.Completion_Date_Text__c}" />
+                <apex:column breakBefore="true" colspan="3">
+                    <apex:outputText value="{!ed.Description__c}" escape="false" />            
+                </apex:column>
+            </apex:dataTable>
+        </c:panel>
+        <c:panel title="Professional Development" type="default">
+            <apex:dataTable value="{!trainingCourses}" var="tc" styleClass="table table-hover" >
+                <apex:column value="{!tc.Course_Name__c}" headerValue="Course" />
+                <apex:column value="{!tc.Organization__r.Name}, {!tc.Location__c}" headerValue="Location" />
+                <apex:column value="{!tc.Completion_Date__c}" headerValue="Completed"  />
+            </apex:dataTable>
+        </c:panel>
+        
+        <c:panel title="Accomplishments" type="primary" >
+            <c:well >
+                <apex:dataList value="{!accomplishments}" var="acc" >
+                    <apex:outputText value="<b>{!acc.Name} </b> - {!acc.Subtitle__c} ({!acc.Completion_Date__c})" escape="false" />
+                </apex:dataList>
+            </c:well>
+        </c:panel>
+        
+        <c:panel title="Technical Skills" type="default" >
+            <c:well >
+                <apex:dataList value="{!technicalSkills}" var="techSkills" >
+                    <apex:outputText value="<b>{!techSkills.Name} </b> - {!techSkills.Skills_List__c}" escape="false" />
+                </apex:dataList>
+            </c:well>
+        </c:panel>
+        
+        <div class="footer">
+            <center>
+                <div>Resume built on the Force.com Platform by Jacques Grillot with Salesforce DX</div>
+            </center>
+        </div>
+    </c:visualstrapblock>
+</apex:page>
