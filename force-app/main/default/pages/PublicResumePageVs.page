@@ -1,9 +1,9 @@
-<apex:page standardController="Resume__c" extensions="ResumeControllerExtension">
+<apex:page standardController="Resume__c" extensions="ResumeControllerExtension" showHeader="false" sidebar="false" >
     <c:importvisualstrap theme="paper"/>
     <c:visualstrapblock >
-        <c:pageheader title="{!Resume__c.Contact__r.Name}"/>
         <c:well >
-            <H3>{!Resume__c.Contact__r.Title}</H3><br/>
+            <c:pageheader title="{!Resume__c.Contact__r.Name}"/>
+            <H4>{!Resume__c.Contact__r.Title}</H4><br/>
             <H5>{!Resume__c.Contact__r.MailingCity}, {!Resume__c.Contact__r.MailingState}</H5>
             <apex:pageBlock >
                 <apex:pageBlockSection columns="2" showHeader="true" >
