@@ -1,4 +1,22 @@
 <apex:page standardController="Resume__c" extensions="ResumeControllerExtension" renderAs="pdf" showHeader="false" sidebar="false" standardStylesheets="false" applyBodyTag="false" applyHtmlTag="false" >
+    <head>
+        <style type="text/css" media="print">
+            @page {
+                @bottom-left {
+                    content: element(footer);
+                }
+            }
+            div.header {
+                padding: 10px;
+                position: running(header);
+            }
+            div.footer {
+                display: block;
+                padding: 5px;
+                position: running(footer);
+            }
+        </style>
+    </head>
     <c:importvisualstrap theme="pdf"/>
     <c:visualstrapblock >
         
@@ -69,4 +87,9 @@
             </p>
         </c:well>
     </c:visualstrapblock>
+    <div class="footer">
+        <div>
+            <center>Resume built on Force.com Platform by Jacques Grillot</center>
+        </div>
+    </div>
 </apex:page>
