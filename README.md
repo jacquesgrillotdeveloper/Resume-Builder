@@ -3,7 +3,7 @@ The Resume builder app is meant for Admins, Developers, and other Salesforce aff
 I welcome any contributions to improve this app (especially for UI enhancements).
 
 ## Design
-Please refer to the [Wiki](wiki) for Design.
+Please refer to the [Wiki](https://github.com/jacquesgrillotdeveloper/Resume-Builder/wiki) for Design.
 
 ## Dev, Build and Test
 ### Dev Status
