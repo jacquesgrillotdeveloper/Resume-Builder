@@ -4,8 +4,8 @@
             "path": "force-app",
             "default": true,
             "package": "ResumeBuilder",
-            "versionName": "Summer '18",
-            "versionNumber": "1.5.0.NEXT"
+            "versionName": "Summer '18 (VisualStrap Support)",
+            "versionNumber": "1.6.0.NEXT"
         }
     ],
     "namespace": "",
@@ -17,6 +17,7 @@
         "ResumeBuilder@1.2.0-1": "04t5A0000011IqAQAU",
         "ResumeBuilder@1.3.0-1": "04t5A000001pt8eQAA",
         "ResumeBuilder@1.4.0-1": "04t5A000001pwXiQAI",
-        "ResumeBuilder@1.5.0-1": "04t5A000001pxTbQAI"
+        "ResumeBuilder@1.5.0-1": "04t5A000001pxTbQAI",
+        "ResumeBuilder@1.6.0-1": "04t5A000001qeHuQAI"
     }
 }
