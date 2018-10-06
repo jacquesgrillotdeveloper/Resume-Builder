@@ -16,21 +16,25 @@ Please refer to the [Wiki](https://github.com/jacquesgrillotdeveloper/Resume-Bui
 * Lightning App configured with Help in Lightning Bar.
 * Help documentation in App complete.
 * All Apex and Vf is complete.
-#### Build
+### Build
 * App is still under development - packaging, distributed, and public page still pending.
-#### Test
+### Test
 * Lightning App testing for entering data for resume complete.
 ## Issues
 * PDF version of Resume is not perfect. I haven't figured out how to prevent pageblocks from splitting across pages. May be resolved via CSS version.
 ## Installation
-* COMING SOON - If you simply want to use this app for your resume on a developer org navigate to the App Exchange
-* If you want to use this Project with Salesforce DX for getting used to the tool fork this repo and deploy via SFDX
-* After forking my repo, clone the repo to your machine
-* Ensure you have a DevOrg authorized and create a scratch org
-* Push the project: sfdx:force:source:push
-* Assign the Resume_Builder permission set to your default user: sfdx force:user:permset:assign --permsetname Resume_Builder
-* Push data from the TestData folder: sfdx force:data:tree:import --plan TestData/resume-data-tree-plan.json
-* Open your org: sfdx force:org:open
+* This App is intended to be developed and deployed through Salesforce DX.
+    * Simply  fork this repo and deploy via SFDX.
+* After forking my repo, clone the repo to your machine.
+* Ensure you have a DevOrg authorized and create a scratch org.
+* Push the project: 
+    'sfdx:force:source:push'
+* Assign the Resume_Builder permission set to your default user:
+    'sfdx force:user:permset:assign --permsetname Resume_Builder'
+* Push data from the TestData folder: 
+    'sfdx force:data:tree:import --plan TestData/resume-data-tree-plan.json'
+* Open your org: 
+    'sfdx force:org:open'
 * Set the record types for Account, Experience, and Achievement records
 * Set the page layouts for Account, Contact, and Experience record types
 * Edit the Resume Lightning App page - drag the Visualforce component under the Details component. Set the component to the ResumePagePDF, and the height to 500. 
