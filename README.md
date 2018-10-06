@@ -28,13 +28,13 @@ Please refer to the [Wiki](https://github.com/jacquesgrillotdeveloper/Resume-Bui
 * After forking my repo, clone the repo to your machine.
 * Ensure you have a DevOrg authorized and create a scratch org.
 * Push the project: 
-    'sfdx:force:source:push'
+    `sfdx:force:source:push`
 * Assign the Resume_Builder permission set to your default user:
-    'sfdx force:user:permset:assign --permsetname Resume_Builder'
+    `sfdx force:user:permset:assign --permsetname Resume_Builder`
 * Push data from the TestData folder: 
-    'sfdx force:data:tree:import --plan TestData/resume-data-tree-plan.json'
+    `sfdx force:data:tree:import --plan TestData/resume-data-tree-plan.json`
 * Open your org: 
-    'sfdx force:org:open'
+    `sfdx force:org:open`
 * Set the record types for Account, Experience, and Achievement records
 * Set the page layouts for Account, Contact, and Experience record types
 * Edit the Resume Lightning App page - drag the Visualforce component under the Details component. Set the component to the ResumePagePDF, and the height to 500. 
