@@ -1,0 +1,34 @@
+[
+    {
+        "sobject": "Resume__c",
+        "saveRefs": true,
+        "resolveRefs": false,
+        "files": [
+            "demo-Resume__cs.json"
+        ]
+    },
+    {
+        "sobject": "Experience__c",
+        "saveRefs": false,
+        "resolveRefs": true,
+        "files": [
+            "demo-Experience__cs.json"
+        ]
+    },
+    {
+        "sobject": "Achievement__c",
+        "saveRefs": false,
+        "resolveRefs": true,
+        "files": [
+            "demo-Achievement__cs.json"
+        ]
+    },
+    {
+        "sobject": "Technical_Skill__c",
+        "saveRefs": false,
+        "resolveRefs": true,
+        "files": [
+            "demo-Technical_Skill__cs.json"
+        ]
+    }
+]

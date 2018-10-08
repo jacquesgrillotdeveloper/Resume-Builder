@@ -16,7 +16,7 @@
         <apexClass>ResumeTestDataFactory</apexClass>
         <enabled>true</enabled>
     </classAccesses>
-    <description>Resume Permission Set for Salesforce DX development</description>
+    <description>Resume Permission Set for Resume Builder App.</description>
     <fieldPermissions>
         <editable>true</editable>
         <field>Account.BillingAddress</field>

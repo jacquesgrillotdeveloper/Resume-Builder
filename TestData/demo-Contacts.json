@@ -5,6 +5,7 @@
                 "type": "Contact",
                 "referenceId": "ContactRef1"
             },
+            "AccountId": "@AccountRef1",
             "LastName": "Grillot",
             "FirstName": "Jacques",
             "Salutation": "Mr.",

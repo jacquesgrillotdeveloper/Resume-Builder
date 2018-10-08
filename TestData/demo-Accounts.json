@@ -56,7 +56,10 @@
             "Name": "Salesforce",
             "BillingCity": "San Francisco",
             "BillingState": "CA",
-            "BillingCountry": "USA"
+            "BillingCountry": "USA",
+            "Website": "www.salesforce.com",
+            "Industry": "Technology",
+            "Ownership": "Public"
         },
         {
             "attributes": {
@@ -70,7 +73,9 @@
             "BillingPostalCode": "11367",
             "BillingCountry": "USA",
             "Phone": "7185556655",
-            "Website": "www.uus.edu"
+            "Website": "www.uus.edu",
+            "Industry": "Education",
+            "Ownership": "Private"
         }
     ]
 }

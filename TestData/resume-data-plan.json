@@ -4,15 +4,15 @@
         "saveRefs": true,
         "resolveRefs": false,
         "files": [
-            "resume-data-Accounts.json"
+            "demo-Accounts.json"
         ]
     },
     {
         "sobject": "Contact",
         "saveRefs": true,
-        "resolveRefs": false,
+        "resolveRefs": true,
         "files": [
-            "resume-data-Contacts.json"
+            "demo-Contacts.json"
         ]
     },
     {
@@ -20,7 +20,7 @@
         "saveRefs": true,
         "resolveRefs": true,
         "files": [
-            "resume-data-Resume__cs.json"
+            "demo-Resume__cs.json"
         ]
     },
     {
@@ -28,7 +28,7 @@
         "saveRefs": false,
         "resolveRefs": true,
         "files": [
-            "resume-data-Experience__cs.json"
+            "demo-Experience__cs.json"
         ]
     },
     {
@@ -36,7 +36,7 @@
         "saveRefs": false,
         "resolveRefs": true,
         "files": [
-            "resume-data-Achievement__cs.json"
+            "demo-Achievement__cs.json"
         ]
     },
     {
@@ -44,7 +44,7 @@
         "saveRefs": false,
         "resolveRefs": true,
         "files": [
-            "resume-data-Technical_Skill__cs.json"
+            "demo-Technical_Skill__cs.json"
         ]
     }
 ]
