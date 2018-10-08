@@ -28,11 +28,11 @@ Please refer to the [Wiki](https://github.com/jacquesgrillotdeveloper/Resume-Bui
 * After forking my repo, clone the repo to your machine.
 * Ensure you have a DevOrg authorized and create a scratch org.
 * Push the project: 
-    `sfdx:force:source:push`
+    * `sfdx:force:source:push`
 * Assign the Resume_Builder permission set to your default user:
-    `sfdx force:user:permset:assign --permsetname Resume_Builder`
+    * `sfdx force:user:permset:assign --permsetname Resume_Builder`
 * Push data from the TestData folder: 
-    `sfdx force:data:tree:import --plan TestData/resume-data-tree-plan.json`
+    * `sfdx force:data:tree:import --plan TestData/resume-data-plan.json`
 * Open your org: 
     `sfdx force:org:open`
 * Set the record types for Account, Experience, and Achievement records
