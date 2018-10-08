@@ -6,7 +6,9 @@
 .classpath
 .vscode
 .idea
-jaxdata
+D-TestData
+
+debug.log
 
 force-app/main/default/sites
 
@@ -44,6 +46,9 @@ force-app/main/default/profiles/ResumeBuilder Profile\.profile-meta\.xml
 force-app/main/default/profiles/Custom%3A Marketing Profile\.profile-meta\.xml
 force-app/main/default/profiles/Custom%3A Sales Profile\.profile-meta\.xml
 force-app/main/default/profiles/Custom%3A Support Profile\.profile-meta\.xml
+force-app/main/default/profiles/ResumeBuilder.profile-meta.xml
+force-app/main/default/profiles/ResumeBuilderProfile.profile.meta.xml
+force-app/main/default/profiles/ResumeBuilder Profile.profile-meta.xml 
 
 force-app/main/default/pages/SiteTemplate\.page
 force-app/main/default/pages/SiteTemplate\.page-meta\.xml
@@ -79,14 +84,3 @@ force-app/main/default/pages/AnswersHome\.page
 force-app/main/default/pages/AnswersHome\.page-meta\.xml
 force-app/main/default/pages/BandwidthExceeded\.page
 force-app/main/default/pages/BandwidthExceeded\.page-meta\.xml
-
-force-app/main/default/staticresources/SiteSamples/img/force_logo\.png
-force-app/main/default/staticresources/SiteSamples/img/maintenance\.png
-force-app/main/default/staticresources/SiteSamples/img/poweredby\.png
-force-app/main/default/staticresources/SiteSamples/img/tools\.png
-force-app/main/default/staticresources/SiteSamples/img/unauthorized\.png
-force-app/main/default/staticresources/SiteSamples/img/warning\.png
-force-app/main/default/staticresources/SiteSamples/SiteStyles\.css
-force-app/main/default/staticresources/SiteSamples\.resource-meta\.xml
-force-app/main/default/staticresources/SiteSamples/img/clock\.png
-force-app/main/default/staticresources/SiteSamples/img/construction\.png

@@ -5,7 +5,7 @@
             "default": true,
             "package": "ResumeBuilder",
             "versionName": "Summer '18 (VisualStrap Support)",
-            "versionNumber": "1.6.0.NEXT"
+            "versionNumber": "1.7.0.NEXT"
         }
     ],
     "namespace": "",
@@ -18,6 +18,7 @@
         "ResumeBuilder@1.3.0-1": "04t5A000001pt8eQAA",
         "ResumeBuilder@1.4.0-1": "04t5A000001pwXiQAI",
         "ResumeBuilder@1.5.0-1": "04t5A000001pxTbQAI",
-        "ResumeBuilder@1.6.0-1": "04t5A000001qeHuQAI"
+        "ResumeBuilder@1.6.0-1": "04t5A000001qeHuQAI",
+        "ResumeBuilder@1.7.0-1": "04t5A000001qfYbQAI"
     }
 }

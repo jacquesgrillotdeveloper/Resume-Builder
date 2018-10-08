@@ -2,6 +2,6 @@
 <RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Educational</fullName>
     <active>true</active>
-    <description>Educational Experience</description>
+    <description>Educational Experience.</description>
     <label>Educational</label>
 </RecordType>

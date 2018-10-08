@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Description__c</fullName>
-    <description>Contains the details on the experience</description>
+    <description>Rich-Text field contains the details on the experience.</description>
     <externalId>false</externalId>
     <label>Description</label>
     <length>130000</length>

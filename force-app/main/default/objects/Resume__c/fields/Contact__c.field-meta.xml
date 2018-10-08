@@ -2,7 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Contact__c</fullName>
     <deleteConstraint>Restrict</deleteConstraint>
-    <description>Master lookup to the Contact record. In the context where a user will have access to the resume of the contact they create, not necessarily the resume of others.</description>
+    <description>Lookup field to the Contact Object. This relates the resume so that the contact info can be populated on Resume pages.</description>
     <externalId>false</externalId>
     <label>Contact</label>
     <referenceTo>Contact</referenceTo>

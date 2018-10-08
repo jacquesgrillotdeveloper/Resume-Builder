@@ -1,0 +1,14 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "Resume__c",
+                "referenceId": "Resume__cRef1"
+            },
+            "Contact__c": "@ContactRef1",
+            "Name": "Salesforce Architect",
+            "Summary__c": "<p>Innovative Salesforce Certified Application Architect with strong analytical, database, and technical skills. Led the implementation of three separate Salesforce systems as a customer, in the Nonprofit, Financial Services, and Software sectors. Five years experience in Salesforce administration and solutions. Over 10 years experience in requirements definition and refinement, and 4 years of Agile experience. Broad methodology knowledge including Agile Scrum, Scaled Agile Framework (SAFe) and DevOps practices. Achieved Ranger status on Salesforce Trailhead with 150 badges including 4 superbadges.</p>",
+            "Active__c": true
+        }
+    ]
+}
