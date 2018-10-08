@@ -1,0 +1,95 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "Experience__c",
+                "referenceId": "Experience__cRef1"
+            },
+            "Organization__c": "@AccountRef5",
+            "Degree_Earned__c": "B.S. Computer Management Information Systems",
+            "Completion_Date__c": "2003-05-16",
+            "Current_Position__c": false,
+            "Resume__c": "@Resume__cRef1",
+            "Description__c": "<ul><li>Minor in Information Systems Management.</li><li>Courses included Windows Administration, Database Administration, Technical Writing, and Programming.</li></ul>",
+            "Location__c": "Queens, NY"
+        },
+        {
+            "attributes": {
+                "type": "Experience__c",
+                "referenceId": "Experience__cRef2"
+            },
+            "Organization__c": "@AccountRef1",
+            "Job_Title__c": "Senior Consultant",
+            "Start_Date__c": "2015-06-29",
+            "Current_Position__c": true,
+            "Resume__c": "@Resume__cRef1",
+            "Description__c": "<ul><li>Design, and Deploy Salesforce Platform Encryption solution for Financial Services company.</li><li>Communicate design, project plan, and road map to customer on the project.</li><li>Work with Developer to assign config and programmatic updates to platform to support project.</li></ul>",
+            "Location__c": "Remote (NJ,CA)"
+        },
+        {
+            "attributes": {
+                "type": "Experience__c",
+                "referenceId": "Experience__cRef3"
+            },
+            "Organization__c": "@AccountRef4",
+            "Completion_Date__c": "2018-03-06",
+            "Current_Position__c": false,
+            "Resume__c": "@Resume__cRef1",
+            "Location__c": "San Francisco, CA",
+            "Course_Name__c": "TrailheaDX Architect Bootcamp"
+        },
+        {
+            "attributes": {
+                "type": "Experience__c",
+                "referenceId": "Experience__cRef4"
+            },
+            "Organization__c": "@AccountRef3",
+            "Job_Title__c": "Senior Systems Engineer",
+            "Start_Date__c": "2004-01-05",
+            "End_Date__c": "2012-03-20",
+            "Current_Position__c": false,
+            "Resume__c": "@Resume__cRef1",
+            "Description__c": "<ul><li>Spearheaded implementation of Salesforce as CRM System for organization to improve customer support tracking and recoup lost revenue from Customers that lapsed on maintenance.</li><li>Migrated off on-prem system (boo!) to Salesforce Cloud System (yay!).</li><li>Manage SI development team and report statuses to Management.</li></ul>",
+            "Location__c": "Washington, DC"
+        },
+        {
+            "attributes": {
+                "type": "Experience__c",
+                "referenceId": "Experience__cRef5"
+            },
+            "Organization__c": "@AccountRef4",
+            "Completion_Date__c": "2017-06-09",
+            "Current_Position__c": false,
+            "Resume__c": "@Resume__cRef1",
+            "Location__c": "New York, NY",
+            "Course_Name__c": "Programmatic Development using Apex and Visualforce"
+        },
+        {
+            "attributes": {
+                "type": "Experience__c",
+                "referenceId": "Experience__cRef6"
+            },
+            "Organization__c": "@AccountRef4",
+            "Completion_Date__c": "2017-02-17",
+            "Current_Position__c": false,
+            "Resume__c": "@Resume__cRef1",
+            "Description__c": "<p><b style=\"color: black; font-family: Arial, sans-serif;\">Class: Introduction to Object-Oriented Programming using Apex (ADM-231) </b></p><p><b style=\"color: black; font-family: Arial, sans-serif;\">*Registrant Status: Attended</b></p><p><span style=\"color: black; font-family: Arial, sans-serif;\"> </span></p><p><u style=\"color: black; font-family: Arial, sans-serif;\">Course details: </u></p><p><span style=\"color: black; font-family: Arial, sans-serif;\">Start: 02/13/2017 08:30 AM EST</span></p><p><span style=\"color: black; font-family: Arial, sans-serif;\">End: 02/17/2017 05:00 PM EST</span></p><p><span style=\"color: black; font-family: Arial, sans-serif;\">Instructor: Gruhl, Peter </span></p><p><span style=\"color: black; font-family: Arial, sans-serif;\">Location: Washington, DC- 1110 Vermont Ave NW, Suite 700</span></p><p><span style=\"color: black; font-family: Arial, sans-serif;\">Location address:US DC Washington 1110 Vermont Ave NW, Suite 700</span></p>",
+            "Location__c": "Washington, DC",
+            "Course_Name__c": "Introduction to Object-Oriented Programming using Apex"
+        },
+        {
+            "attributes": {
+                "type": "Experience__c",
+                "referenceId": "Experience__cRef7"
+            },
+            "Organization__c": "@AccountRef2",
+            "Job_Title__c": "Salesforce Technical Lead",
+            "Start_Date__c": "2012-03-26",
+            "End_Date__c": "2015-06-26",
+            "Current_Position__c": false,
+            "Resume__c": "@Resume__cRef1",
+            "Description__c": "<ul><li>Lead team on new DevOps methodology for increased development and release velocity and reducing bottlenecks in processes.</li><li>Lead migration effort off of Salesforce change sets onto a Continuous Integration platform with integration to a Git repository, and ALM system.</li><li>Collaborate with the scrum teams with solution design, provide guidance on development strategy, development and implementation planning.</li></ul>",
+            "Location__c": "San Francisco, CA"
+        }
+    ]
+}

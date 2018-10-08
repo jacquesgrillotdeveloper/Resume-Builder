@@ -2,6 +2,6 @@
 <RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Accomplishment</fullName>
     <active>true</active>
-    <description>Accomplishment achieved</description>
+    <description>Accomplishment achieved.</description>
     <label>Accomplishment</label>
 </RecordType>

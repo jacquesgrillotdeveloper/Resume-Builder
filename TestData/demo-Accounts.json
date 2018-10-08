@@ -1,0 +1,81 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "Account",
+                "referenceId": "AccountRef1"
+            },
+            "Name": "Codey Enterprises",
+            "BillingStreet": "2400 Camino Ramon",
+            "BillingCity": "San Ramon",
+            "BillingState": "CA",
+            "BillingPostalCode": "94583",
+            "BillingCountry": "USA",
+            "Phone": "9255551122",
+            "Website": "www.codey.com",
+            "Industry": "Consulting",
+            "Ownership": "Private"
+        },
+        {
+            "attributes": {
+                "type": "Account",
+                "referenceId": "AccountRef2"
+            },
+            "Name": "Blaze Bank",
+            "BillingStreet": "464 California Street",
+            "BillingCity": "San Francisco",
+            "BillingState": "CA",
+            "BillingPostalCode": "94104",
+            "BillingCountry": "USA",
+            "Phone": "4155553322",
+            "Website": "www.blaze.com",
+            "Industry": "Consulting",
+            "Ownership": "Public"
+        },
+        {
+            "attributes": {
+                "type": "Account",
+                "referenceId": "AccountRef3"
+            },
+            "Name": "Astro Consulting",
+            "BillingStreet": "511 10th Street NW",
+            "BillingCity": "Washington",
+            "BillingState": "DC",
+            "BillingPostalCode": "20004",
+            "BillingCountry": "USA",
+            "Phone": "2025558877",
+            "Website": "www.astro.com",
+            "Industry": "Consulting",
+            "Ownership": "Private"
+        },
+        {
+            "attributes": {
+                "type": "Account",
+                "referenceId": "AccountRef4"
+            },
+            "Name": "Salesforce",
+            "BillingCity": "San Francisco",
+            "BillingState": "CA",
+            "BillingCountry": "USA",
+            "Website": "www.salesforce.com",
+            "Industry": "Technology",
+            "Ownership": "Public"
+        },
+        {
+            "attributes": {
+                "type": "Account",
+                "referenceId": "AccountRef5"
+            },
+            "Name": "University of the United States",
+            "BillingStreet": "65-30 Kissena Blvd",
+            "BillingCity": "Flushing",
+            "BillingState": "NY",
+            "BillingPostalCode": "11367",
+            "BillingCountry": "USA",
+            "Phone": "7185556655",
+            "Website": "www.uus.edu",
+            "Industry": "Education",
+            "Ownership": "Private"
+        }
+    ]
+}

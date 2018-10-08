@@ -2,7 +2,7 @@
 <RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Resume_Contact</fullName>
     <active>true</active>
-    <description>Contact record for a Resume</description>
+    <description>Contact record for a Resume.</description>
     <label>Resume Contact</label>
     <picklistValues>
         <picklist>LeadSource</picklist>

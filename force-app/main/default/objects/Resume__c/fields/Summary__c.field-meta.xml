@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Summary__c</fullName>
-    <description>Resume summary contains the a summary of qualifications</description>
+    <description>Rich-Text field summarizes the Resume, such as highlighting accomplishments and experiences.</description>
     <externalId>false</externalId>
     <inlineHelpText>Enter in the summary of your qualifications for the position.</inlineHelpText>
     <label>Summary</label>
