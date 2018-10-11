@@ -38,8 +38,9 @@ public class ResumeTestDataFactory {
         //Create 3 Test Accomplishments with a decremental sort order so the controller will re-sort
         Id RecordTypeIdAccm = Schema.SObjectType.Achievement__c.getRecordTypeInfosByName().get('Accomplishment').getRecordTypeId();
         List<Achievement__c> testAccms = new List<Achievement__c>();
-        for (integer t=3; t>0; t--){
+        for (integer t=4; t>0; t--){
             testAccms.add(new Achievement__c (Name='Accomplishment ' + t,
+                                              Subtitle__c = 'Venue ' + t,
                                               Resume__c = testResume.Id,
                                               RecordTypeId = RecordTypeIdAccm,
                                               Completion_Date__c = System.today(),
@@ -61,7 +62,7 @@ public class ResumeTestDataFactory {
         
         //Create an Education Institution
         Id RecordTypeIdUni = Schema.SObjectType.Account.getRecordTypeInfosByName().get('Education Organization').getRecordTypeId();
-        Account testUni = new Account( RecordTypeId = RecordTypeIdUni, Name='The University of the United States', BillingCity='Queens', BillingState='NY' );
+        Account testUni = new Account( RecordTypeId = RecordTypeIdUni, Name='The University of the United States', BillingCity='Queens', BillingState='NY', Industry='Education');
         insert testUni;
         // Create a Test Degree
         Id RecordTypeIdEdu = Schema.SObjectType.Experience__c.getRecordTypeInfosByName().get('Educational').getRecordTypeId();
