@@ -22,6 +22,7 @@ Please refer to the [Wiki](https://github.com/jacquesgrillotdeveloper/Resume-Bui
 * Lightning App testing for entering data for resume complete.
 ## Issues
 * PDF version of Resume is not perfect. I haven't figured out how to prevent pageblocks from splitting across pages. May be resolved via CSS version.
+* Issue with System Administrator profile failing resolved. This also resolves Record Types not being assigned on initial loads.
 ## Installation
 * This App is intended to be developed and deployed through Salesforce DX.
     * Simply  fork this repo and deploy via SFDX.
