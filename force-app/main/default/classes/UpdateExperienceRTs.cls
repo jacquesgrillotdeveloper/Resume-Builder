@@ -21,6 +21,7 @@ public class UpdateExperienceRTs implements Database.Batchable<sObject>, Databas
         // query record types to change to. 
         Id RecordTypeIdEdu = Schema.SObjectType.Experience__c.getRecordTypeInfosByName().get('Educational').getRecordTypeId();
         Id RecordTypeIdPrDv = Schema.SObjectType.Experience__c.getRecordTypeInfosByName().get('Professional Development').getRecordTypeId();
+        Id RecordTypeIdProf = Schema.SObjectType.Experience__c.getRecordTypeInfosByName().get('Professional').getRecordTypeId();
         // Declare and instantiate a new list to store updated experience records
         List <Experience__c> experiences = new List<Experience__c>();
         for (Experience__c experience : scope){
@@ -33,6 +34,11 @@ public class UpdateExperienceRTs implements Database.Batchable<sObject>, Databas
             // Records with the Course Name field populated are Professoinal development experiences. Increment counter by 1 for each record processed.
             else if (experience.Course_Name__c != null){
                 experience.RecordTypeId = RecordTypeIdPrDv;
+                experiences.add(experience);
+                recordsProcessed = recordsProcessed + 1;
+            }
+            else{
+                experience.RecordTypeId = RecordTypeIdProf;
                 experiences.add(experience);
                 recordsProcessed = recordsProcessed + 1;
             }
